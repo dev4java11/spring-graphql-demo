@@ -1,0 +1,43 @@
+type MDate{
+	value: String
+	format: String
+}
+
+type MUser {
+	uuid: String
+	fullName: String
+	numberCard: String
+	birthday: MDate
+}
+
+type MPost {
+	uuid: String
+	publish: MDate
+	title: String
+	description: String
+	user: MUser
+}
+
+type MCommentary {
+	uuid: String
+	description: String
+	publish: MDate
+	user: MUser
+	post: MPost
+}
+
+type MPublication {
+	uuid: String
+	queryDate: MDate
+	post: MPost
+	comentaries: [MCommentary]
+}
+
+type Query{
+	getPublications: [MPublication]
+	getPublicationByPostUUID(uuid: String): MPublication
+}
+
+schema{
+	query: Query
+}
