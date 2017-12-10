@@ -1,0 +1,49 @@
+query
+=====================================================================================================================================================
+{
+	getPublications{
+		uuid
+		queryDate{
+			value
+			format
+		}
+		post{
+			uuid
+			publish{
+				value
+				format
+			}
+			title
+			description
+			user{
+				uuid
+				fullName
+				numberCard
+				birthday{
+					value
+					format
+				}
+			}
+		}
+		comentaries{
+			uuid
+			description
+			publish{
+				value
+				format
+			}
+			user{
+				uuid
+				fullName
+				numberCard
+				birthday{
+					value
+					format
+				}
+			}
+		}	
+	}
+}
+====================================================================================================================================================
+url
+http://localhost:8080/graphql?query=%7B%0D%0A%09getPublications%7B%0D%0A%09%09uuid%0D%0A%09%09queryDate%7B%0D%0A%09%09%09value%0D%0A%09%09%09format%0D%0A%09%09%7D%0D%0A%09%09post%7B%0D%0A%09%09%09uuid%0D%0A%09%09%09publish%7B%0D%0A%09%09%09%09value%0D%0A%09%09%09%09format%0D%0A%09%09%09%7D%0D%0A%09%09%09title%0D%0A%09%09%09description%0D%0A%09%09%09user%7B%0D%0A%09%09%09%09uuid%0D%0A%09%09%09%09fullName%0D%0A%09%09%09%09numberCard%0D%0A%09%09%09%09birthday%7B%0D%0A%09%09%09%09%09value%0D%0A%09%09%09%09%09format%0D%0A%09%09%09%09%7D%0D%0A%09%09%09%7D%0D%0A%09%09%7D%0D%0A%09%09comentaries%7B%0D%0A%09%09%09uuid%0D%0A%09%09%09description%0D%0A%09%09%09publish%7B%0D%0A%09%09%09%09value%0D%0A%09%09%09%09format%0D%0A%09%09%09%7D%0D%0A%09%09%09user%7B%0D%0A%09%09%09%09uuid%0D%0A%09%09%09%09fullName%0D%0A%09%09%09%09numberCard%0D%0A%09%09%09%09birthday%7B%0D%0A%09%09%09%09%09value%0D%0A%09%09%09%09%09format%0D%0A%09%09%09%09%7D%0D%0A%09%09%09%7D%0D%0A%09%09%7D%09%0D%0A%09%7D%0D%0A%7D
